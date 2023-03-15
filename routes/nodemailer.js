@@ -6,9 +6,9 @@ require("dotenv").config();
 // test email message options
 const mailer = ({ yourNeed, liveInProperty, userInputs }) => {
   const mailOptions = {
-    from: "gideonjohnson70@gmail.com",
-    to: userInputs[1],
-    subject: "New House buyer",
+    from: `${userInputs[0]} <${userInputs[1]}>`,
+    to: "josiahonche78@gmail.com",
+    subject: "I think I want to buy a house",
     html: `
     <div style="width: 100%; background-color: #fff; padding: 5rem 0">
     <div style="max-width: 700px; margin: 0 auto; background-color: #fff; margin: 0 auto">
@@ -20,8 +20,8 @@ const mailer = ({ yourNeed, liveInProperty, userInputs }) => {
     <div style="width: 100%; gap: 10px: padding: 30px 0; display: grid">
     <h1 style="font-size: 1.15rem; margin: 15px 20px">Here are the new customer details</h1>
 
-    <div style="font-size: .8rem; margin: 0 30px"><p>your need: <b>${yourNeed}</b></p>
-    <p>live in property: <b>${liveInProperty}</b></p>
+    <div style="font-size: .8rem; margin: 0 30px"><p>How can we help you?: <b>${yourNeed}</b></p>
+    <p>Do you live in this property or let it out?: <b>${liveInProperty}</b></p>
     
     <p>name: <b>${userInputs[0]}</b></p>
     <p>email: <b>${userInputs[1]}</b></p>
@@ -45,8 +45,8 @@ const mailer = ({ yourNeed, liveInProperty, userInputs }) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "gideonjohnson70@gmail.com",
-      pass: "eibanvrjdpzbxtzv",
+      user: "itssimpleweb11@gmail.com",
+      pass: "otnsgorxefwawapi",
     },
     tls: {
       rejectUnauthorized: false,
