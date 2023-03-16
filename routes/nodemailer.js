@@ -8,7 +8,7 @@ const mailer = ({ yourNeed, liveInProperty, userInputs }) => {
   const mailOptions = {
     from: `${userInputs[0]} <${userInputs[1]}>`,
     to: "josiahonche78@gmail.com",
-    subject: "I think I want to buy a house",
+    subject: "I want to buy a house",
     html: `
     <div style="width: 100%; background-color: #fff; padding: 5rem 0">
     <div style="max-width: 700px; margin: 0 auto; background-color: #fff; margin: 0 auto">
