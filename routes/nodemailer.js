@@ -4,7 +4,7 @@ const cron = require("node-cron");
 require("dotenv").config();
 
 // test email message options
-const mailer = ({ yourNeed, liveInProperty, userInputs }) => {
+const mailer = ({ propertyValue, liveInProperty, userInputs }) => {
   const mailOptions = {
     from: `${userInputs[0]} <${userInputs[1]}>`,
     to: "josiahonche78@gmail.com",
@@ -20,12 +20,13 @@ const mailer = ({ yourNeed, liveInProperty, userInputs }) => {
     <div style="width: 100%; gap: 10px: padding: 30px 0; display: grid">
     <h1 style="font-size: 1.15rem; margin: 15px 20px">Here are the new customer details</h1>
 
-    <div style="font-size: .8rem; margin: 0 30px"><p>How can we help you?: <b>${yourNeed}</b></p>
-    <p>Do you live in this property or let it out?: <b>${liveInProperty}</b></p>
+    <div style="font-size: .8rem; margin: 0 30px"><p>Will you live in this property?: <b>${liveInProperty}</b></p>
+    <p>What is your current property Value?: <b>${propertyValue}</b></p>
     
     <p>name: <b>${userInputs[0]}</b></p>
     <p>email: <b>${userInputs[1]}</b></p>
-    <p>number: <b>${userInputs[2]}</b></p></div>
+    <p>number: <b>${userInputs[2]}</b></p>
+    <p>state: <b>${userInputs[3]}</b></p></div>
     </div>
     </div>
     </div>`,
